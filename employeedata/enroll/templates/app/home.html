@@ -7,6 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <H1>home page</H1>
+    {% extends 'base.html' %}
+
+{% block content %}
+  <h2>Employee Registration</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Register">
+  </form>
+{% endblock %}
 </body>
 </html>

@@ -15,6 +15,8 @@ class Employee(models.Model):
     phoneNo = models.CharField(max_length=10)
     address =models.TextField()
     designation = models.CharField(choices = DESIGNATION_CHOICES, max_length=200)
+    # employeetype = models.CharField('Employee_Format', max_length=100)
+    employeetype = models.CharField(max_length=10)
     
     employee_image = models.ImageField(upload_to = 'employeeimg/', null=True, blank=True)
     
